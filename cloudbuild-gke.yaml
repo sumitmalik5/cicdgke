@@ -1,8 +1,6 @@
 #https://github.com/sumitmalik5/cicdgke.git
 
 steps:
-- name: 'gcr.io/cloud-buiders/git'
-  args: ['clone', 'https://github.com/sumitmalik5/cicdgke.git', 'repo-5']
 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/${_PROJECT_ID}/{_CINAME}:{_VERSION}', '.']
