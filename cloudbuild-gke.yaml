@@ -1,7 +1,7 @@
 #https://github.com/sumitmalik5/cicdgke.git
 
 steps:
-- name: clone repo
+- name: 'gcr.io/cloud-buiders/git'
   run: git clone 'https://github.com/sumitmalik5/cicdgke.git' 'repo-5'
 
 - name: 'gcr.io/cloud-builders/docker'
