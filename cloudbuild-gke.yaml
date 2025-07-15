@@ -1,0 +1,22 @@
+#https://github.com/sumitmalik5/cicdgke.git
+
+steps:
+- name: clone repo
+  args: ['clone', 'https://github.com/sumitmalik5/cicdgke.git', 'repo-5']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/${_PROJECT_ID}/{_CINAME}:{_VERSION}', '.']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/${_PROJECT_ID}/{_CINAME}:{_VERSION}']
+
+  substitutions:
+    _PROJECT_ID : gcp-devops-464200
+    _CINAME : gke-image
+    _VERSION : v1.0
+
+
+
+
+
+  
