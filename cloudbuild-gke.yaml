@@ -2,7 +2,7 @@
 
 steps:
 
-- name: 'us-docker-pkg-dev/cloud-buiders/official/git'
+- name: 'us-docker-pkg-dev/cloud-builders/official/git'
   args: ['clone', 'https://github.com/sumitmalik5/cicdgke.git', 'repo-5']
   
 - name: 'gcr.io/cloud-builders/docker'
